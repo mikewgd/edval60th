@@ -1,0 +1,170 @@
+/**
+* FORMS
+* All form related elements.
+*/
+
+form {
+	margin:0 auto;
+	@include breakpoint($mobile-land) {width:95%;}
+	@include breakpoint($tablet-port) {width:85%;}
+	@include breakpoint($tablet-land) {width:25em;}
+
+	input, textarea {
+		@include border-radius(8px);
+		border:1px solid #ccc;
+	}
+}
+
+.field {
+	margin-bottom:1em; 
+	text-align: left;
+
+	label {
+		display: block;
+		clear:both;
+		margin-bottom: .3em;
+	}
+
+	input, textarea {
+		width:93%;
+		padding:.5em;
+		font-family:'Varela Round', sans-serif;
+		font-size:16px;
+		/*margin-bottom: 10px;*/
+
+		@include breakpoint($mobile-land) {width:95%;}
+		@include breakpoint($tablet-port) {width:97%;}
+		@include breakpoint($tablet-land) {width:98%;}
+
+		&:last-child {margin:0;}
+	}
+
+	p {
+		font-style: italic;
+		font-size:11px;
+		line-height: normal;
+	}
+
+	textarea {
+		height:10em;
+	}
+
+	&.photo {
+		a {
+			padding:.5em;
+			display: block;
+		}
+	}
+}
+
+/* All errors are held here */
+.errors {
+	margin:1em 0;
+}
+
+.message {
+	font-style: italic;
+	color:#fff;
+	background:#000;
+	@include border-radius(90px);
+	padding: .5em 1em;
+	text-align:center;
+	line-height:normal;
+}
+
+.actions {
+	margin-top:1.5em;
+
+	.btn:first-child {
+		margin-right:1em;
+	}
+}
+
+/* Button Style */
+.btn {
+	display:inline-block;
+	background:#f2777a;
+	@include border-radius(8px);
+	padding:1em;
+	font-family:'Varela Round', sans-serif;
+	color:#fff;
+	border:3px solid #f2777a;
+	text-transform:uppercase;
+	font-size:16px;
+	outline:none;
+
+	&.active, &:active {
+		background: #fff;
+		color:#f2777a;
+	}
+
+	&.bigger {
+		width:8em;
+	}
+
+	&.disabled {
+		opacity:.5;
+		cursor: default;
+	}
+}
+
+.login-help {
+	margin-bottom: 1.5em;
+
+	p {margin:0;}
+}
+
+/* Expand state of the forms */
+.form-expand {
+	position: relative;
+	margin-bottom: 1em;
+
+	.btn.active {
+		position:relative;
+		z-index:4;
+		border-bottom: 0;
+		/*@include border-radius(8px);*/
+		@include border-bottom-radius(0px);
+		margin-bottom: 3px;
+	}
+
+	.expand {
+		position:absolute;
+		background:#fff;
+		@include border-radius(8px);
+		@include border-top-radius(0px);
+		@include border-top-right-radius(8px);
+		border:3px solid #f2777a;
+		display:none;
+		top: 52px;
+		left:0;
+		width:100%;
+		z-index: -1;
+
+		@include breakpoint($tablet-port) {
+			width:24em;
+		}
+	}
+
+	form {
+		padding:0 1em 1em 1em;
+
+		@include breakpoint($tablet-port) {
+			padding:0 2em 1em 1.5em;
+			width:20em;
+		}
+	}
+
+	textarea {
+		height: 4em;
+
+		@include breakpoint($tablet-port) {height:10em;}
+	}
+
+	&.open {
+		.expand {
+			display:block;
+			z-index: 3;
+		}
+	}
+}

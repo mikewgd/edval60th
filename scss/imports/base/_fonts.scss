@@ -1,0 +1,26 @@
+/**
+* FONTS
+* Custom font faces.
+*/
+
+@font-face {
+    font-family: 'Varela Round';
+    src: url('../fonts/VarelaRound-Regular.eot');
+    src: url('../fonts/VarelaRound-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/VarelaRound-Regular.woff') format('woff'),
+         url('../fonts/VarelaRound-Regular.ttf') format('truetype'),
+         url('../fonts/VarelaRound-Regular.svg#oswaldbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('../fonts/GreatVibes-Regular.eot');
+    src: url('../fonts/GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GreatVibes-Regular.woff') format('woff'),
+         url('../fonts/GreatVibes-Regular.ttf') format('truetype'),
+         url('../fonts/GreatVibes-Regular.svg#oswaldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,77 @@
+/**
+* HEADER
+*/
+
+.header {
+	height:250px;
+	background:url('../img/header_mob.jpg') top left;
+	position: relative;
+	@include box-shadow(inset 0px 0px 30px 29px rgba(0, 0, 0, 0.5));
+	@include vendor(transition, background-position .1s linear);
+
+	@include breakpoint($mobile-land) {
+		height: 190px;
+	}
+
+	@include breakpoint($tablet-port) {
+		height:300px;
+		background-image:url('../img/header_tabP.jpg');
+	}
+
+	@include breakpoint($tablet-land) {
+		height:350px;
+		background-image:url('../img/header_tabL.jpg');
+	}
+
+	@include breakpoint($desktop-small) {
+		height: 470px;
+		background-image:url('../img/header.jpg');
+	}
+
+	h1 {
+		font-family: 'Great Vibes', cursive;
+		color:#fff;
+		font-size:48px;
+		position: absolute;
+		bottom:26%;
+		left:0;
+		line-height: 36px;
+		text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
+		width:100%;
+		text-align: center;
+
+		@include breakpoint($mobile-land) {
+			font-size:35px;
+			bottom:30%;
+			line-height: normal;
+		}
+
+		@include breakpoint($tablet-port) {
+			font-size: 3.5em;
+			bottom:20%;
+		}
+
+		@include breakpoint($tablet-land) {
+			font-size:4.5em;
+		}
+
+		@include breakpoint($desktop-small) {
+			font-size:5.5em;
+			bottom:15%;
+		}
+
+		span {
+			display:block;
+			clear:both;
+			font-size:33px;
+
+			@include breakpoint($mobile-land) {
+				clear:none;
+				display: inline;
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+@import "nav.scss";

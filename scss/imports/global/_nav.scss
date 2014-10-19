@@ -1,0 +1,38 @@
+/**
+* NAVIGATION
+*/
+
+nav {
+	position: absolute;
+	bottom:5%;
+	width:100%;
+	text-align: center;
+
+	ul {
+		position: relative;
+		z-index: 1;
+	}
+
+	a {
+		padding:10px 5px;
+		display: block;
+		font-size:13px;
+
+		@include breakpoint($mobile-land) {padding:12px;}
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	&:after {
+		content:"";
+		background:#fff;
+		opacity:.85;
+		width:100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+}

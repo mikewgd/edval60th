@@ -1,0 +1,8 @@
+.sass-cache
+node_modules
+includes/co.php
+config.json
+.htaccess
+includes/.htaccess
+img/uploads/full
+img/uploads/thumbs

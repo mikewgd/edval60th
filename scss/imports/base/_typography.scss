@@ -1,0 +1,37 @@
+/**
+* TYPOGRAPHY
+* All text related styles
+*/
+
+/* Header tags */
+@for $i from 2 through 6 {
+	h#{$i} {
+		font-family: 'Varela Round', sans-serif;
+		font-size:(6/$i)+em;
+		margin-bottom: .5em;
+	}
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+p {
+	font-size:14px;
+	margin-bottom:1em;
+	line-height: 24px;
+
+	@include breakpoint($desktop-small) {
+		font-size:16px;
+		line-height: 30px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	text-decoration:none;
+	color:$link-color;
+}

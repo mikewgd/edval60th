@@ -1,0 +1,43 @@
+/**
+* USAGE PAGE 
+*/
+
+@import "compass/reset/utilities";
+@import "compass/css3";
+@import "../base/variables.scss";
+@import "../base/mixins.scss";
+
+.usage-page {
+
+	.content {
+		li {
+			margin-bottom: 15px;
+		}
+
+		.indent {
+			padding-left: 3.5em;
+		}
+
+		span:not(.indent) {
+			display: inline-block;
+			background:#999;
+			color:#fff;
+			@include border-radius(40px);
+			width:40px;
+			height:40px;
+			font-size: 30px;
+			font-style: italic;
+			text-align: center;
+			margin-right: 10px;
+		}
+	}
+
+	.header {
+		height:250px !important;
+
+		@include breakpoint($mobile-land) {height: 190px !important;}
+		@include breakpoint($tablet-port) {height:300px !important;}
+		@include breakpoint($tablet-land) {height:350px !important;}
+		@include breakpoint($desktop-small) {height: 470px !important;}
+	}
+}

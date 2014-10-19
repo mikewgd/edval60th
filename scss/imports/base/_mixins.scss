@@ -1,0 +1,31 @@
+/**
+* MIXINS & FUNCTIONS
+* All mixins and functions go here.
+*/
+
+/**
+* @mixin breakpoint
+* Used to include styles for specific breakpoints.
+* Usage: @include breakpoint(400px) {color:red;}
+*
+* @param $size - min-width to apply certain styles.
+*/
+@mixin breakpoint($size){
+	@media all and (min-width: $size) {@content;}
+}
+
+/**
+* @mixin vendor 
+* Apply vendor prefixes to elements.
+* Usage: @include vendor(transition, all .5s linear);
+*
+* @param $name - property to apply vendor prefix to.
+* @param $args - value of the style property.
+*/
+@mixin vendor ($name, $arg) {
+	#{$name}: $arg;
+	-webkit-#{$name}: $arg;
+	-ms-#{$name}: $arg;
+	-moz-#{$name}: $arg;
+	-o-#{$name}: $arg;
+}

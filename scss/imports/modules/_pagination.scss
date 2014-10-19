@@ -1,0 +1,54 @@
+/**
+* PAGINATION
+* Pagination module with arrow and page numbers.
+*/
+
+.pagination {
+	text-align: center;
+	margin:2em 0;
+
+	& > a, ul, li {display: inline-block;}
+
+	& > a {
+		width: 0; 
+		height: 0;
+		text-indent: -9999em;
+		border-style: solid;
+		border-width: 14px;
+		border-color:#fff;
+		position: relative;
+		top:10px;
+
+		&.prev {
+			border-right-color:#f2777a; 
+		}
+
+		&.next {
+			border-left-color:#f2777a;
+			border-right-color:#fff;
+		}
+	}
+
+	ul {
+		a {
+			background:#f2777a;
+			@include border-radius(6px);
+			padding:1em;
+			font-family:'Varela Round', sans-serif;
+			color:#fff;
+			border:3px solid #f2777a;
+			display: block;
+			width:1.5em;
+			padding:.2em 0;
+		}
+
+		.active a {
+			background: #fff;
+			color:#f2777a;
+		}
+	}
+
+	li {
+		margin:0 5px;
+	}
+}

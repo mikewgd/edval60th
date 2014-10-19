@@ -1,0 +1,75 @@
+
+@import "compass/reset/utilities";
+@import "compass/css3";
+
+@import "imports/base/fonts.scss";
+@import "imports/base/variables.scss";
+@import "imports/base/mixins.scss";
+
+@include global-reset();
+
+body {
+	font: 16px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position:relative;
+}
+
+.lc {
+	margin:0 5%;
+	@extend .clear;
+
+	@include breakpoint($mobile-land) {
+		margin:0 4%;
+	}
+
+	@include breakpoint($tablet-port) {
+		margin:0 3%;
+	}
+
+	@include breakpoint($tablet-land) {
+		margin:0 auto;
+		width:100%;
+		max-width: 58em;
+	}
+
+	@include breakpoint($desktop-small) {
+		max-width: 71em;
+	}
+}
+
+.content {
+	padding:2em 0;
+
+	@include breakpoint($tablet-port) {
+		padding:3em 0;
+		padding-bottom:7em;
+	}
+
+	@extend .clear;
+}
+
+/* General Classes */
+.center {
+	text-align:center;
+}
+
+.fr {
+	float: right;
+}
+
+.clear {
+	display:block;
+	clear:both;
+
+	&:after {
+		content:" ";
+		clear:both;
+		display: block;
+	}
+}
+
+@import "imports/base/typography.scss";
+@import "imports/base/forms.scss";
+
+@import "imports/global/header.scss";
+@import "imports/global/footer.scss";
+@import "imports/modules.scss";
